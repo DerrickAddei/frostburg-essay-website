@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Call to Action | Frostburg</title>
+    <!-- Importing Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Simple CSS for the "typewriter" effect on the hero text -->
+    <style>
+        .typewriter h1 {
+            overflow: hidden; 
+            border-right: .15em solid #3b82f6; /* The typewriter cursor */
+            white-space: nowrap; 
+            margin: 0 auto; 
+            letter-spacing: .05em; 
+            animation: 
+                typing 3.5s steps(30, end),
+                blink-caret .75s step-end infinite;
+        }
+
+        /* The typing effect */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        /* The typewriter cursor effect */
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #3b82f6; }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation Bar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600">FSU Faith in Action</div>
+            <div class="space-x-6 hidden md:flex">
+                <a href="#home" class="text-gray-600 hover:text-blue-600">Home</a>
+                <a href="#problem" class="text-gray-600 hover:text-blue-600">The Problem</a>
+                <a href="#solution" class="text-gray-600 hover:text-blue-600">Our Answer</a>
+                <a href="#action" class="text-gray-600 hover:text-blue-600">Your Role</a>
+                <a href="#resources" class="text-gray-600 hover:text-blue-600">Resources</a>
+            </div>
+            <!-- Mobile Menu Button (Optional, can be wired up later) -->
+            <div class="md:hidden">
+                <button class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section 1: Hero / Home -->
+        <section id="home" class="h-screen flex items-center justify-center bg-white text-center px-6">
+            <div class="max-w-3xl">
+                <!--  -->
+                <img src="https://placehold.co/600x300/e0f2fe/0284c7?text=Faith+in+Action" alt="Abstract image of a path" class="w-full max-w-lg mx-auto rounded-lg shadow-lg mb-12"
+                     onerror="this.src='https://placehold.co/600x300/e0f2fe/0284c7?text=Image+Placeholder'">
+                <div class="typewriter">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900">What good is your faith without works?</h1>
+                </div>
+                <p class="text-lg text-gray-600 mt-6">
+                    <!-- TODO: DERRICK: Add the rest of your introductory paragraph here. -->
+                    There comes a time for everyone when we are tested. We will be called to stand for what we believe. When that time comes, will you stand?
+                </p>
+                <a href="#problem" class="mt-12 inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-lg text-lg shadow-lg hover:bg-blue-700 transition duration-300">
+                    See The Challenge
+                </a>
+            </div>
+        </section>
+
+        <!-- Section 2: The Problem -->
+        <section id="problem" class="py-24 bg-gray-900 text-white px-6">
+            <div class="container mx-auto max-w-5xl text-center">
+                <span class="text-blue-400 font-semibold uppercase">The Challenge We Face</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-4">The World Is Getting Darker</h2>
+                <p class="text-lg text-gray-300 mt-6 max-w-3xl mx-auto">
+                    <!-- TODO: DERRICK: This is where you adapt your paragraph about current events. -->
+                    It seems to be the case that every week we hear of another human tragedy. The hate in this world is thickening and spreading like a virus. Brethren, now is not a time for silence.
+                </p>
+
+                <!-- This is for your FIRE statistic. It's designed to be a "wow" moment. -->
+                <div class="mt-16 bg-gray-800 rounded-lg p-10 shadow-xl border border-gray-700">
+                    <h3 class="text-3xl font-bold text-blue-400">1 in 3 Students</h3>
+                    <p class="text-xl text-gray-200 mt-4">
+                        <!-- TODO: DERRICK: This placeholder is already accurate, but you can refine it. -->
+                        A recent study by the Foundation for Individual Rights and Expression (FIRE) showed that 1 in 3 students now believe violence is a justifiable means to stop someone from expressing their opinion.
+                    </p>
+                    <p class="text-lg text-gray-400 mt-2">(Weiss and Lenthall-Cleary)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: The Solution -->
+        <section id="solution" class="py-24 bg-white px-6">
+            <div class="container mx-auto max-w-5xl grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <!--  -->
+                    <img src="https://placehold.co/600x400/dbeafe/1e40af?text=Love+and+Compassion" alt="People in discussion" class="w-full rounded-lg shadow-lg"
+                         onerror="this.src='https://placehold.co/600x400/dbeafe/1e40af?text=Image+Placeholder'">
+                </div>
+                <div class="text-left">
+                    <span class="text-blue-600 font-semibold uppercase">Our Answer</span>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-4">Our Response is the Love of Christ</h2>
+                    <p class="text-lg text-gray-600 mt-6">
+                        <!-- TODO: DERRICK: Adapt your paragraph here about Christ being the answer. -->
+                        Everyone from the world to America to Frostburg is asking, “Where do we go next?” Well let’s tell them, because we have an answer. The answer is Christ.
+                    </p>
+                    <!-- This blockquote is perfect for the 1 Cor. 13 quote -->
+                    <blockquote class="mt-6 border-l-4 border-blue-500 pl-6 italic text-gray-700">
+                        <!-- TODO: DERRICK: This placeholder is accurate, but you can fill out the full quote. -->
+                        "Love is patient, love is kind, it is not jealous; love does not brag, it is not arrogant... it does not rejoice in unrighteousness, but rejoices with the truth..."
+                        <cite class="block mt-2 not-italic font-semibold text-gray-600">- 1 Corinthians 13:4-7</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: How We Fight (The Method) -->
+        <section id="action" class="py-24 bg-blue-50 px-6">
+            <div class="container mx-auto max-w-5xl text-center">
+                <span class="text-blue-600 font-semibold uppercase">Our Method</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-4">We Don't Fight People, We Fight Ideas</h2>
+                <p class="text-lg text-gray-600 mt-6 max-w-3xl mx-auto">
+                    <!-- TODO: DERRICK: This is where you put your paragraph about *how* to fight (2 Cor. 10.3). -->
+                    The world fights battles by cheating, deception, and cruelty, but this is not how we fight. Our weapons are not of the flesh.
+                </p>
+                
+                <!-- This grid is for your bullet points from Paragraph 8 -->
+                <div class="grid md:grid-cols-3 gap-8 text-left mt-16">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-blue-600">Listen & Empathize</h3>
+                        <!-- TODO: DERRICK: Add your content from Paragraph 8 here. -->
+                        <p class="mt-2 text-gray-600">We listen and are patient. We empathize and show compassion. We stand firm but not with pride.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-blue-600">Live as Examples</h3>
+                        <p class="mt-2 text-gray-600">We teach, we correct, we guide. This fight demands proactiveness; it is not simply enough to pray.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-blue-600">Go & Make Disciples</h3>
+                        <p class="mt-2 text-gray-600">God waits for us to act. He has given us the power: "Go, therefore, and make disciples of all the nations." (Matt. 28:19)</p>
+                    </div>
+                </div>
+
+                <!-- This is your primary Call to Action -->
+                <div class="mt-20 bg-white p-10 rounded-lg shadow-2xl text-center max-w-4xl mx-auto">
+                    <h3 class="text-3xl font-bold text-gray-900">One Person Can't Wrap Their Arms Around the Earth.</h3>
+                    <p class="text-xl text-gray-700 mt-4">
+                        <!-- TODO: DERRICK: This is your 'neighbor' metaphor. -->
+                        But eight billion can. We don't have to reach everyone. We just have to reach our neighbor. If I can't reach people in Europe, at least I can reach my neighbor, <span class="font-bold text-blue-600">you</span>.
+                    </p>
+                    <a href="#resources" class="mt-8 inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-lg text-lg shadow-lg hover:bg-blue-700 transition duration-300">
+                        Start Here: Find Resources
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: The Resource Hub -->
+        <section id="resources" class="py-24 bg-gray-100 px-6">
+            <div class="container mx-auto max-w-5xl text-center">
+                <span class="text-blue-600 font-semibold uppercase">Grow Your Faith</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-4">Resource Hub</h2>
+                <p class="text-lg text-gray-600 mt-6 max-w-3xl mx-auto">
+                    This is a starting point. Here are resources to help you grow in your faith, connect with others, and learn how to be a light on campus.
+                </p>
+
+                <!-- 
+                  UPDATED: Changed to a 3-column grid per your request.
+                -->
+                <div class="grid md:grid-cols-3 gap-8 mt-16 text-left">
+                    
+                    <!-- Resource Card 1: Bible Study Tools (Consolidated) -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                        <img src="https://placehold.co/400x200/dbeafe/1e40af?text=Bible+Study+Tools" alt="Bible Study Tools" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/400x200/dbeafe/1e40af?text=Image+Placeholder'">
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-2xl font-bold text-gray-900">Bible Study Tools</h3>
+                            <p class="text-gray-600 mt-2">A collection of free and powerful tools to help you read and understand scripture at any level.</p>
+                            <ul class="mt-4 space-y-2">
+                                <li><a href="https://apps.apple.com/us/app/bible/id282935706" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-semibold hover:underline">YouVersion (App) &rarr;</a></li>
+                                <li><a href="https://biblehub.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-semibold hover:underline">Bible Hub (Web) &rarr;</a></li>
+                                <li><a href="https://www.logos.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-semibold hover:underline">Logos (Freemium) &rarr;</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Resource Card 2: Connect on Campus (Updated) -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                        <img src="https://placehold.co/400x200/bfdbfe/1d4ed8?text=Connect+at+FSU" alt="Connect on Campus" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/400x200/bfdbfe/1d4ed8?text=Image+Placeholder'">
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-2xl font-bold text-gray-900">Connect on Campus</h3>
+                            <p class="text-gray-600 mt-2">
+                                A core part of this message is community. Find these FSU groups (and more) on Bobcat Links:
+                                <span class="font-semibold text-gray-700">100% Triumph</span>, 
+                                <span class="font-semibold text-gray-700">United Campus Ministry</span>, 
+                                <span class="font-semibold text-gray-700">The Crossing</span>, and 
+                                <span class="font-semibold text-gray-700">Fellowship of Christian Athletes</span>.
+                            </p>
+                        </div>
+                        <div class="p-6 bg-gray-50">
+                            <a href="https://frostburg.campuslabs.com/engage/" target="_blank" rel="noopener noreferrer" class="inline-block text-blue-600 font-semibold hover:underline">Visit Bobcat Links &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Resource Card 3: Further Reading (New Placeholder) -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                        <img src="https://placehold.co/400x200/e0e7ff/1d4ed8?text=Further+Reading" alt="Further Reading" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/400x200/e0e7ff/1d4ed8?text=Image+Placeholder'">
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-2xl font-bold text-gray-900">Further Reading</h3>
+                            <p class="text-gray-600 mt-2">
+                                <!-- TODO: DERRICK: Add links to articles or books that support your essay. -->
+                                Here you can add links to articles or books that expand on the themes of your essay, such as modern discipleship or Christian apologetics.
+                            </p>
+                        </div>
+                         <div class="p-6 bg-gray-50">
+                            <a href="#" class="inline-block text-gray-400 font-semibold cursor-not-allowed">Links Coming Soon</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Encouragement -->
+        <section id="encouragement" class="py-24 bg-white px-6">
+            <div class="container mx-auto max-w-3xl text-center">
+                <!--  -->
+                <img src="https://placehold.co/600x300/f0f9ff/0c4a6e?text=A+Future+and+A+Hope" alt="Hopeful sunrise" class="w-full max-w-lg mx-auto rounded-lg shadow-lg mb-12"
+                     onerror="this.src='https://placehold.co/600x300/f0f9ff/0c4a6e?text=Image+Placeholder'">
+                <h2 class="text-4xl font-bold text-gray-900">For Those Who Are Shaken, Endure.</h2>
+                <p class="text-lg text-gray-600 mt-6">
+                    <!-- TODO: DERRICK: Adapt your final paragraphs of encouragement here. -->
+                    I wish I could say life has no hardships, but I can't. What I can say is that you’re not alone. We have a God Who knows and understands our pain, because He walked this world just like us.
+                </p>
+                <blockquote class="mt-8 border-l-4 border-blue-500 pl-6 italic text-gray-700 text-2xl">
+                    “For I know the plans that I have for you... plans for prosperity and not for disaster, to give you a future and a hope.”
+                    <cite class="block mt-2 not-italic font-semibold text-gray-600 text-base">- Jeremiah 29:11</cite>
+                </blockquote>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 px-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 | A Call to Action by Derrick L.</p>
+            <p class="mt-2 text-sm">A project for English 101, Frostburg State University.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
