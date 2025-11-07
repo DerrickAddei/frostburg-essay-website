@@ -18,20 +18,22 @@
         }
     </script>
     <!-- 
-      UPDATED: The CSS here has been modified to be responsive.
+      UPDATED: The CSS here has been modified.
     -->
     <style>
-        /* Default (Mobile) styles: Text wraps, no animation */
+        /* Default (Mobile & Tablet) styles: Text wraps, no animation */
         .typewriter h1 {
-            white-space: normal; /* Allow text to wrap on small screens */
+            white-space: normal; /* Allow text to wrap on small/medium screens */
             border-right: none;
             margin: 0 auto;
             letter-spacing: .05em;
-            animation: none; /* No animation on mobile */
+            animation: none; /* No animation */
         }
 
-        /* The typing effect - ONLY for screens 768px (md) and wider */
-        @media (min-width: 768px) {
+        /* THE FIX: Changed this from 768px (md) to 1024px (lg).
+          The animation will now only play on large laptop/desktop screens.
+        */
+        @media (min-width: 1024px) {
             .typewriter h1 {
                 overflow: hidden; /* Hide overflow on large screens */
                 border-right: .15em solid #3b82f6; /* The typewriter cursor */
