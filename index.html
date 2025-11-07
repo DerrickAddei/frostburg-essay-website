@@ -18,39 +18,41 @@
         }
     </script>
     <!-- 
-      UPDATED: The CSS here has been modified.
+      UPDATED: The CSS here has been modified with the correct animation.
     -->
     <style>
         /* Default (Mobile & Tablet) styles: Text wraps, no animation */
         .typewriter h1 {
-            white-space: normal; /* Allow text to wrap on small/medium screens */
+            white-space: normal; /* Allow text to wrap */
             border-right: none;
             margin: 0 auto;
             letter-spacing: .05em;
-            animation: none; /* No animation */
+            animation: none; 
         }
 
-        /* THE FIX: Changed this from 768px (md) to 1024px (lg).
-          The animation will now only play on large laptop/desktop screens.
-        */
+        /* The typing effect - ONLY for screens 1024px (lg) and wider */
         @media (min-width: 1024px) {
             .typewriter h1 {
-                overflow: hidden; /* Hide overflow on large screens */
+                overflow: hidden; /* Hide overflow */
                 border-right: .15em solid #3b82f6; /* The typewriter cursor */
-                white-space: nowrap; /* Keep it on one line on large screens */
+                white-space: nowrap; /* Keep it on one line */
+                margin: 0 auto; /* Keep it centered */
+                
+                /* THE FIX: Animate the width to 37ch (37 characters) */
+                width: 37ch; 
                 animation: 
-                    typing 3.5s steps(30, end),
+                    typing 3.5s steps(37, end), /* Use 37 steps */
                     blink-caret .75s step-end infinite;
             }
         }
-
-        /* The typing effect keyframe */
+        
+        /* This keyframe animates the h1's width */
         @keyframes typing {
             from { width: 0 }
-            to { width: 100% }
+            to { width: 37ch } /* Animate to 37 characters, NOT 100% */
         }
 
-        /* The typewriter cursor effect keyframe */
+        /* The cursor animation */
         @keyframes blink-caret {
             from, to { border-color: transparent }
             50% { border-color: #3b82f6; }
@@ -246,7 +248,7 @@
                             <p class="text-gray-600 mt-2">
                                 <!-- TODO: DERRICK: Add links to articles or books that support your essay. -->
                                 Here you can add links to articles or books that expand on the themes of your essay, such as modern discipleship or Christian apologetics.
-                            </p>
+                            </D>
                         </div>
                          <div class="p-6 bg-gray-50">
                             <!-- SECURITY FIX: Added rel="noopener noreferrer" -->
