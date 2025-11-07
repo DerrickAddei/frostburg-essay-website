@@ -17,26 +17,38 @@
             }
         }
     </script>
-    <!-- Simple CSS for the "typewriter" effect on the hero text -->
+    <!-- 
+      UPDATED: The CSS here has been modified to be responsive.
+    -->
     <style>
+        /* Default (Mobile) styles: Text wraps, no animation */
         .typewriter h1 {
-            overflow: hidden; 
-            border-right: .15em solid #3b82f6; /* The typewriter cursor */
-            white-space: nowrap; 
-            margin: 0 auto; 
-            letter-spacing: .05em; 
-            animation: 
-                typing 3.5s steps(30, end),
-                blink-caret .75s step-end infinite;
+            white-space: normal; /* Allow text to wrap on small screens */
+            border-right: none;
+            margin: 0 auto;
+            letter-spacing: .05em;
+            animation: none; /* No animation on mobile */
         }
 
-        /* The typing effect */
+        /* The typing effect - ONLY for screens 768px (md) and wider */
+        @media (min-width: 768px) {
+            .typewriter h1 {
+                overflow: hidden; /* Hide overflow on large screens */
+                border-right: .15em solid #3b82f6; /* The typewriter cursor */
+                white-space: nowrap; /* Keep it on one line on large screens */
+                animation: 
+                    typing 3.5s steps(30, end),
+                    blink-caret .75s step-end infinite;
+            }
+        }
+
+        /* The typing effect keyframe */
         @keyframes typing {
             from { width: 0 }
             to { width: 100% }
         }
 
-        /* The typewriter cursor effect */
+        /* The typewriter cursor effect keyframe */
         @keyframes blink-caret {
             from, to { border-color: transparent }
             50% { border-color: #3b82f6; }
@@ -73,6 +85,7 @@
                 <img src="https://placehold.co/600x300/e0f2fe/0284c7?text=Faith+in+Action" alt="Abstract image of a path" class="w-full max-w-lg mx-auto rounded-lg shadow-lg mb-12"
                      onerror="this.src='https://placehold.co/600x300/e0f2fe/0284c7?text=Image+Placeholder'">
                 <div class="typewriter">
+                    <!-- This h1 is now responsive. It will wrap on small screens -->
                     <h1 class="text-4xl md:text-5xl font-bold text-gray-900">What good is your faith without works?</h1>
                 </div>
                 <p class="text-lg text-gray-600 mt-6">
