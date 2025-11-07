@@ -18,38 +18,47 @@
         }
     </script>
     <!-- 
-      UPDATED: The CSS here has been modified with the correct animation.
+      UPDATED: The CSS here has been significantly refactored
+      to fix all horizontal and vertical clipping bugs.
     -->
     <style>
         /* Default (Mobile & Tablet) styles: Text wraps, no animation */
         .typewriter h1 {
             white-space: normal; /* Allow text to wrap */
-            border-right: none;
             margin: 0 auto;
             letter-spacing: .05em;
-            animation: none; 
         }
 
         /* The typing effect - ONLY for screens 1024px (lg) and wider */
         @media (min-width: 1024px) {
-            .typewriter h1 {
+            /* 1. We apply animation to the PARENT DIV, not the H1 */
+            .typewriter {
+                display: inline-block; /* Allows the div to have a width */
                 overflow: hidden; /* Hide overflow */
                 border-right: .15em solid #3b82f6; /* The typewriter cursor */
                 white-space: nowrap; /* Keep it on one line */
-                margin: 0 auto; /* Keep it centered */
+                margin: 0 auto;
                 
-                /* THE FIX: Animate the width to 37ch (37 characters) */
-                width: 37ch; 
+                /* THE FIX: Animate width to 38ch (37 text + 1 for cursor) */
+                width: 38ch; 
                 animation: 
-                    typing 3.5s steps(37, end), /* Use 37 steps */
+                    typing 3.5s steps(38, end),
                     blink-caret .75s step-end infinite;
+            }
+            
+            /* 2. The H1 itself is simple and has no overflow clipping */
+            .typewriter h1 {
+                display: inline-block;
+                width: auto;
+                overflow: visible; /* Default, ensures 'g' and 'y' are not clipped */
+                white-space: nowrap; /* Match the parent */
             }
         }
         
-        /* This keyframe animates the h1's width */
+        /* This keyframe animates the PARENT DIV's width */
         @keyframes typing {
             from { width: 0 }
-            to { width: 37ch } /* Animate to 37 characters, NOT 100% */
+            to { width: 38ch } /* Animate to 38 characters */
         }
 
         /* The cursor animation */
@@ -88,10 +97,12 @@
                 <!--  -->
                 <img src="https://placehold.co/600x300/e0f2fe/0284c7?text=Faith+in+Action" alt="Abstract image of a path" class="w-full max-w-lg mx-auto rounded-lg shadow-lg mb-12"
                      onerror="this.src='https://placehold.co/600x300/e0f2fe/0284c7?text=Image+Placeholder'">
+                
+                <!-- This parent div will now be animated -->
                 <div class="typewriter">
-                    <!-- This h1 is now responsive. It will wrap on small screens -->
                     <h1 class="text-4xl md:text-5xl font-bold text-gray-900">What good is your faith without works?</h1>
                 </div>
+
                 <p class="text-lg text-gray-600 mt-6">
                     <!-- TODO: DERRICK: Add the rest of your introductory paragraph here. -->
                     There comes a time for everyone when we are tested. We will be called to stand for what we believe. When that time comes, will you stand?
